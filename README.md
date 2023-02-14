@@ -1,12 +1,13 @@
 # Diceware
 
-Implementation of diceware to build passphrases. This method generates random 5
-digits number to build passphrases. We can use as many words as desired.
+This is a CLI implementation of diceware to build passphrases.
+This method generates random 5-digit numbers to build passphrases.
+We can use as many words as desired.
 
-The script will
+The utility will
 
 1. Genereate N random numbers.
-2. Use those numbers to look up for words on the EEF wordlist file
+2. Use those numbers to look up for words on the [EEF wordlist](https://www.eff.org/files/2016/07/18/eff_large_wordlist.txt) file
 3. Return the resulting passphrase
 
 We can also add a symbol in a random possition of the passphrase. This can
@@ -38,7 +39,7 @@ Call
 python3 -m diceware
 ```
 
-To generate a 4-word based passphrase (the default).
+to generate a 4-word based passphrase (the default).
 
 Use the `-n` argument to specify other lengths.
 
@@ -60,7 +61,3 @@ No 3rd party library is required. `python3.9` or greater is required.
 
 - [Diceware - Wikipedia](https://en.wikipedia.org/wiki/Diceware)
 - [Dicweare & Passwords - Computerphile](https://www.youtube.com/watch?v=Pe_3cFuSw1E&ab_channel=Computerphile)
-
-
-# TODO:
-- add entropy calculation

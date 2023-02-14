@@ -4,7 +4,7 @@ from pathlib import Path
 
 from diceware.core import roll_dice
 from diceware.utils import load_words
-from diceware.passwords import add_symbol
+from diceware.passwords import add_symbol, calculate_entropy
 
 def main(n_of_words: int, symbol: bool = False):
 
@@ -30,6 +30,7 @@ if __name__ == "__main__":
         prog="diceware",
         description="Generate random passphrases using the diceware method"
     )
+    
     parser.add_argument(
         "-n",
         "--number_of_words",
@@ -49,15 +50,19 @@ if __name__ == "__main__":
     
     args = parser.parse_args()
     
+    n_of_words = args.number_of_words
     response = main(
-        n_of_words=args.number_of_words,
+        n_of_words=n_of_words,
         symbol=args.add_symbol
     )
     
     words = " ".join(response)
     passphrase = words.replace(" ", "")
+    bits_of_entropy = calculate_entropy(length=n_of_words)
     
     print(f"""
     {words=}
     {passphrase=}
+
+    {bits_of_entropy=}
     """)

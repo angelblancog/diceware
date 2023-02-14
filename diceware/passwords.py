@@ -23,16 +23,18 @@ def calculate_entropy(
     length: int,
     possible_symbols: int = 7776
     ) -> float:
-    """Calculate the entropy of a passphrase
+    """Calculate the entropy of a passphrase.
 
     Parameters
     ----------
     * length : int
-        number of words of the passphrase
+        password length
 
     * possible_symbols : int, optional
         number of possible words, by default 7776. 7776 is the size
-        of the EEF Wordlist.
+        of the EEF Wordlist. We assume that the attacker
+        knows the dictionary and hence our size of possible symbols is the
+        mentioned EEF Wordlist size.
         
 
     Returns
@@ -44,7 +46,7 @@ def calculate_entropy(
     combinations = possible_symbols**length
     bits_of_entropy = log2(combinations)
 
-    return bits_of_entropy
+    return round(bits_of_entropy, 2)
 
 
 def add_symbol(word: str, symbols: str = string.punctuation) -> str:
