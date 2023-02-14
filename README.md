@@ -10,9 +10,6 @@ The utility will
 2. Use those numbers to look up for words on the [EEF wordlist](https://www.eff.org/files/2016/07/18/eff_large_wordlist.txt) file
 3. Return the resulting passphrase
 
-We can also add a symbol in a random possition of the passphrase. This can
-be achieved with the `--add-symbol` parameter.
-
 
 ## Installation
 
@@ -47,7 +44,8 @@ Use the `-n` argument to specify other lengths.
 python3 -m diceware -n 6
 ```
 
-Use the `-a` or `--add-symbol` flag to add a random symbol.
+Use the `-a` or `--add-symbol` flag to add a random symbol. This will increase
+the password complexity
 
 ```
 python3 -m diceware -n 6
