@@ -8,6 +8,7 @@ setup(
     author='Gabriel Blanco',
     author_email='gabriel.blancogarcia98@gmail.com',
     packages=['diceware'],
+    include_package_data=True,
     url='https://github.com/TheGBG/diceware',
     license='LICENSE.txt',
     description='Python implementation of diceware.',
