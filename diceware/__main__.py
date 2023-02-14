@@ -1,5 +1,6 @@
 import argparse
 import random
+from pathlib import Path
 
 from diceware.core import roll_dice
 from diceware.utils import load_words
@@ -7,8 +8,10 @@ from diceware.passwords import add_symbol
 
 def main(n_of_words: int, symbol: bool = False):
 
+    path =  Path(Path(__file__).parent, "data", "eff_wordlist.txt")
+    words = load_words(path)
+    
     numbers = [roll_dice(5) for i in range(n_of_words)]
-    words = load_words()
     passphrase = [words[number] for number in numbers]
 
     if symbol:

@@ -2,8 +2,8 @@ from pathlib import Path
 
 
 def load_words(
-    path: Path = Path("data", "eff_wordlist.txt"),
-    encoding: str="utf-8",
+    path: Path,
+    encoding: str = "utf-8",
     line_separator: str = "\n",
     pair_separator: str = "\t"
     ) -> dict[str, str]:
