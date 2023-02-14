@@ -52,7 +52,15 @@ Use the `-a` or `--add-symbol` flag to add a random symbol.
 python3 -m diceware -n 6
 ```
 
+## Requirements
+
+No 3rd party library is required. `python3.9` or greater is required.
+
+## References
+
+- [Diceware - Wikipedia](https://en.wikipedia.org/wiki/Diceware)
+- [Dicweare & Passwords - Computerphile](https://www.youtube.com/watch?v=Pe_3cFuSw1E&ab_channel=Computerphile)
+
 
 # TODO:
-- provide a way to set random seed
 - add entropy calculation

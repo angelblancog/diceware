@@ -1,10 +1,22 @@
 '''
 Password related methods
 '''
+from typing import Optional
 
 import random
 import string
 from math import log2
+
+
+def reseed(hash_: Optional[int] = None) -> None:
+    """
+    Set the random seed using a random number
+    """
+    
+    if not hash_:
+        hash_ = random.randint(-1000000, 1000000) * random.randint(-1000000, 1000000)
+    
+    random.seed(hash_)
 
 
 def calculate_entropy(
@@ -39,7 +51,7 @@ def add_symbol(word: str, symbols: str = string.punctuation) -> str:
     """
     Randomly introduce a symbol in a string.
     """
-
+    reseed()
     index = random.randint(0, len(word))
     symbol = random.choice(symbols)
 
@@ -50,7 +62,8 @@ def generate_password(lenght: int = 12) -> str:
     """
     Return a random string of a given length.
     """
-
+    reseed()
+    
     characters = string.ascii_letters + string.digits + string.punctuation
 
     return "".join(random.choice(characters) for i in range(lenght))
