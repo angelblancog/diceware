@@ -5,9 +5,8 @@
     <img src="img/dices.png" width="40%">
 </p>
 
-This is a CLI implementation of diceware to build passphrases.
-This method generates random 5-digit numbers to build passphrases.
-We can use as many words as desired.
+This is a CLI implementation of the diceware metod to build passphrases.
+The method generates random 5-digit numbers to build passphrases by rolling dices.
 
 The utility will
 
