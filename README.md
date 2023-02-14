@@ -1,5 +1,10 @@
 # Diceware
 
+<p float="left">
+    <img src="img/password_strength.png" width="50%">
+    <img src="img/dices.png" width="40%">
+</p>
+
 This is a CLI implementation of diceware to build passphrases.
 This method generates random 5-digit numbers to build passphrases.
 We can use as many words as desired.
@@ -59,3 +64,4 @@ No 3rd party library is required. `python3.9` or greater is required.
 
 - [Diceware - Wikipedia](https://en.wikipedia.org/wiki/Diceware)
 - [Dicweare & Passwords - Computerphile](https://www.youtube.com/watch?v=Pe_3cFuSw1E&ab_channel=Computerphile)
+- [xkdc - password strength](https://xkcd.com/936/)
