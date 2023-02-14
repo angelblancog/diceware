@@ -40,7 +40,8 @@ if __name__ == "__main__":
         "--add_symbol",
         type=bool,
         default=False,
-        help="Add a random symbol to one of the words. By default False."
+        action=argparse.BooleanOptionalAction,
+        help="Add a random symbol to one of the words."
     )
     
     args = parser.parse_args()
@@ -53,6 +54,7 @@ if __name__ == "__main__":
     words = " ".join(response)
     passphrase = words.replace(" ", "")
     
-    print(f"{words=}")
-    print(f"{passphrase=}")
-
+    print(f"""
+    {words=}
+    {passphrase=}
+    """)
