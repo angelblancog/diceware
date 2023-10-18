@@ -1,4 +1,4 @@
-# Diceware
+# Dicewaretest
 
 <p float="left">
     <img src="img/password_strength.png" width="50%">
